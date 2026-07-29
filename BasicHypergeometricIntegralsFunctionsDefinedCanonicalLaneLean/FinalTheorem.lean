@@ -1,0 +1,16 @@
+import canonicalLaneMathlib.AdmissibleClass
+import BasicHypergeometricIntegralsFunctionsDefinedCanonicalLaneLean.BasicHypergeometricSeries
+import BasicHypergeometricIntegralsFunctionsDefinedCanonicalLaneLean.BasicHypergeometricIntegrals
+
+namespace HautevilleHouse
+namespace BasicHypergeometricIntegralsFunctionsDefinedCanonicalLaneLean
+
+def ConstrainedBasicHypergeometricIntegralsFunctionsDefinedClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem basic_hypergeometric_integrals_functions_defined_endgame (A : AdmissibleClass) :
+    ConstrainedBasicHypergeometricIntegralsFunctionsDefinedClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end BasicHypergeometricIntegralsFunctionsDefinedCanonicalLaneLean
+end HautevilleHouse
